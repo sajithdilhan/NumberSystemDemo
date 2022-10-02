@@ -62,9 +62,10 @@ catch (Exception ex)
 }
 
 static Stack<long> ConvertToBinary(string decimalNumber)
-{
+{  
     long decNumber = 0;
     long.TryParse(decimalNumber, out decNumber);
+    //Console.WriteLine(Convert.ToString(decNumber, 2)); // .NET out of the box support
     Stack<long> output = new Stack<long>();
 
     while (decNumber >= 2)
@@ -85,6 +86,7 @@ static Stack<long> ConvertToOctal(string decimalNumber)
 {
     long decNumber = 0;
     long.TryParse(decimalNumber, out decNumber);
+    //Console.WriteLine(Convert.ToString(decNumber, 8)); // .NET out of the box support
     Stack<long> output = new Stack<long>();
 
     while (decNumber >= 8)
@@ -105,6 +107,7 @@ static Stack<string> ConvertToHexa(string decimalNumber)
 {
     BigInteger decNumber = 0;
     BigInteger.TryParse(decimalNumber, out decNumber);
+    //Console.WriteLine(Convert.ToString(Convert.ToInt32(decimalNumber), 16)); // .NET out of the box support
     Stack<string> output = new Stack<string>();
     string remainderStr = string.Empty;
 
